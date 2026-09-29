@@ -1,0 +1,12 @@
+export const metadata = {
+  title: 'SEENOM_NUAVER',
+  description: 'ระบบสั่งอาหารร้านนมสดและขนมปังปิ้ง SEENOM_NUAVER',
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="th">
+      <body>{children}</body>
+    </html>
+  );
+}
