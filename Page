@@ -1,0 +1,18 @@
+import Link from 'next/link';
+export default function HomePage() {
+  return (
+    <main style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
+      <h1>SEENOM_NUAVER</h1>
+      <p>ร้านนมสดและขนมปังปิ้ง — deploy สำเร็จ ✅</p>
+      <ul>
+        <li>
+          <Link href="/generate-qr">สร้าง QR Code โต๊ะ</Link>
+        </li>
+        <li>
+          <Link href="/kitchen">หน้าจอครัว</Link>
+        </li>
+      </ul>
+    </main>
+  );
+}
+ 
