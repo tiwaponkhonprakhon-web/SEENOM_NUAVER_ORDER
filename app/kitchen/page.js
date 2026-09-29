@@ -1,8 +1,12 @@
 'use client';
  
-import { useCallback, useEffect, useRef, useState } from 'react';
-// ปรับ path ให้ตรงกับโปรเจกต์ของคุณ (ไฟล์ที่ export supabase client)
-import { supabase } from '@/lib/supabaseClient';
+   import { createClient } from '@supabase/supabase-js';
+
+   // สร้าง Supabase client ในไฟล์นี้เลย ไม่ต้อง import จากไฟล์อื่น (กัน path/alias ผิด)
+   const supabase = createClient(
+     process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co',
+     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key'
+   );
  
 const ACTIVE_STATUSES = ['received', 'cooking'];
 const LATE_AFTER_MIN = 10; // เกินกี่นาทีให้เตือนสีแดง
